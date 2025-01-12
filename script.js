@@ -1,25 +1,3 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        const headerOffset = 70;
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-
-        // Close mobile menu if open
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse.classList.contains('show')) {
-            navbarCollapse.classList.remove('show');
-        }
-    });
-});
-
-
 // Activate sidebar nav
 const sidebarLinks = document.querySelectorAll('.sidebar .nav-link');
 sidebarLinks.forEach(link => {
@@ -51,3 +29,34 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Dark mode functionality
+const darkModeToggle = document.getElementById('darkModeToggle');
+const theme = localStorage.getItem('theme');
+
+// Check for saved theme preference
+if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+}
+
+// Toggle dark mode
+darkModeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+
+    if (currentTheme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    }
+});
+
+// Modal functionality
+function openImageModal(imgSrc, imgAlt) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('expandedImage');
+}
