@@ -25,7 +25,7 @@ main {
 
 /* Section styles */
 .section {
-    background-color: #ffffff;
+    background-color: rgb(221, 221, 221);
     margin-bottom: 40px;
     padding: 30px;
     border-radius: 12px;
