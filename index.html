@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamak Aligh - Resume/Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Gamak Aligh</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section id="profile" class="section profile">
+                <h2>Profile</h2>
+                <p>With over three years of IT experience, I am a dedicated professional skilled in network management, systems analysis, and technical support, known for enhancing productivity and delivering exceptional customer satisfaction in dynamic environments.</p>
+            </section>
+
+            <section id="resume" class="section resume">
+                <h2>Resume</h2>
+                <h3>Experience</h3>
+                <h4>IT Support Specialist, Cogeco Connexion (Apr 2022 - Current)</h4>
+                <ul>
+                    <li>Developed troubleshooting protocols, increasing productivity by 130%, enhancing integration and performance.</li>
+                    <li>Achieved a 95% customer satisfaction rating by effectively resolving complex technical issues.</li>
+                    <li>Applied problem-solving skills and analytical thinking to develop innovative solutions for complex connectivity problems.</li>
+                </ul>
+
+                <h4>Field Technician, Cogeco Connexion (Oct 2023 - Oct 2024)</h4>
+                <ul>
+                    <li>Conducted comprehensive diagnostics and repairs on-site, reducing service downtime by 80% and enhancing overall network performance.</li>
+                    <li>Developed detailed service logs and documentation to streamline future maintenance efforts, improving team efficiency by 30%.</li>
+                </ul>
+
+                <h4>Field Support Coordinator, Cogeco Connexion (Oct 2022 - Oct 2023)</h4>
+                <ul>
+                    <li>Efficiently scrubbed and prioritized support tickets, ensuring timely resolution and maintaining clear communication with contractors regarding project completions.</li>
+                    <li>Developed and implemented a streamlined process for managing network noise issues, resulting in a 70% increase in productivity.</li>
+                    <li>Conducted training sessions for team members on Google Data Studio, enhancing their ability to create insightful reports.</li>
+                </ul>
+
+                <h4>IT Lab Technologist, St Clair College (Jan 2022 - Apr 2022)</h4>
+                <ul>
+                    <li>Instructed students on configuring and troubleshooting complex network systems, equipping them with practical skills in network management and problem-solving.</li>
+                    <li>Guided students in performing systems analysis and creating detailed documentation for lab configurations.</li>
+                </ul>
+            </section>
+
+            <section id="projects" class="section projects">
+                <h2>Projects</h2>
+                <div class="project-showcase">
+                    <div class="showcase-grid">
+                        <div class="showcase-card">
+                            <div class="card-content">
+                                <h4>Home Networking Setup</h4>
+                                <p>Custom Home network setup to power 4 buildings with multiple users</p>
+                                <div class="card-image">
+                                    <img src="Images/Network%20Diagram.jpg" 
+                                         alt="Network Diagram" 
+                                         class="feature-image"
+                                         onclick="openImageModal(this.src, this.alt)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-card">
+                            <div class="card-content">
+                                <h4>Network Noise Resolution</h4>
+                                <p>Created a process to resolve network noise with 100% efficiency increase</p>
+                                <div class="card-image">
+                                    <img src="Images/NetworkNoise.jpg" 
+                                         alt="Network Noise Resolution" 
+                                         class="feature-image"
+                                         onclick="openImageModal(this.src, this.alt)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div id="imageModal" class="modal">
+                    <span class="close-modal">&times;</span>
+                    <img class="modal-content" id="expandedImage">
+                    <div id="imageCaption"></div>
+                </div>
+            </section>
+
+            <section id="education" class="section education">
+                <h2>Education</h2>
+                <h4>St Clair College, Windsor, ON</h4>
+                <p>Computer Networking - Systems Technician (Sep 2019 - Apr 2021)</p>
+                <p>Relevant Coursework: Network Administration, Active Directory, Project Management, Systems Analysis, Database Management, and Technical Support Processes.</p>
+
+                <h4>Coursera, Windsor, ON</h4>
+                <p>Google IT Support Certification (Sep 2022)</p>
+                <p>Relevant Coursework: LAN/WAN, Tier 1 support, Tier 2 support, Troubleshooting.</p>
+            </section>
+
+            <section id="skills" class="section skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Network Management</li>
+                    <li>Systems Analysis</li>
+                    <li>Technical Support</li>
+                    <li>Troubleshooting</li>
+                    <li>Customer Service</li>
+                    <li>Project Management</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">© 2025 Gamak Aligh. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openImageModal(imgSrc, imgAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('expandedImage');
+            const captionText = document.getElementById('imageCaption');
+            
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+            captionText.innerHTML = imgAlt;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal with escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeImageModal();
+            }
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                closeImageModal();
+            }
+        }
+
+        // Close modal when clicking X
+        document.querySelector('.close-modal').onclick = closeImageModal;
+    </script>
+</body>
+</html>
